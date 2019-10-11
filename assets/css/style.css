@@ -1,0 +1,88 @@
+/* login page */
+body {
+  /* background-color: #4a55e5; */
+  background-color: #544ae5;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234f5ae7' fill-opacity='1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-family: 'Raleway', sans-serif !important;
+}
+
+nav .register {
+  overflow: auto;
+}
+
+nav .register a.btn {
+  clip-path: circle(13% at 22.5% 45%);
+  transition: 500ms ease;
+}
+
+nav .register a.btn:hover {
+  clip-path: circle(100%)
+}
+
+/* toast error*/
+.toast {
+  opacity: 1;
+  min-width: 240px;
+  max-width: 300px;
+  background: #ff5555;
+  box-shadow: 0 0 5px #ff5555;
+  color: white;
+  z-index: 1;
+  font-family: sans-serif;
+  animation: fade-in-right 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.header h1,
+.header h4 {
+  text-shadow: 3px 3px 4px black
+}
+
+/* sidenav */
+.sideNav {
+  background: #101325;
+  height: 100vh;
+}
+
+.sideNav .brand {
+  text-align: center;
+  font-size: 40px;
+}
+
+.sideNav .brand a {
+  transition: 500ms ease;
+}
+
+.sideNav .brand a:hover {
+  color: #5855ff !important;
+}
+
+.sideNav .navs ul li {
+  background: #0c0e1c;
+  padding: 8px 13px;
+  transition: 500ms ease;
+  max-width: 50px;
+  margin: auto;
+}
+
+.sideNav .navs ul li:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.sideNav .navs ul li:hover i {
+  color: #544ae5;
+}
