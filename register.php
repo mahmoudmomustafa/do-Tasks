@@ -1,11 +1,11 @@
 <?php
-session_start();
 if (isset($_SESSION['userLogged'])) {
   header('location:index.php');
 }
 $Page_title = "Register Page";
 $nav = array("Have an account ?", "login.php", "Login");
 include("includes/header.php");
+include("includes/nav.php");
 ?>
 <!-- content -->
 <div class="main position-relative" id="main">
@@ -114,7 +114,7 @@ include("includes/header.php");
           //handle success
           .then(function(response) {
             app.errors = []
-            if(response.data == ""){
+            if (response.data == "") {
               window.location.href = "index.php"
             }
             app.errors = response.data;

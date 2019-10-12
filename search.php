@@ -1,6 +1,5 @@
 <?php
 include("includes/config.php");
-session_start();
 if (isset($_SESSION["userLogged"])) {
   $userLogged = $_SESSION['userLogged'];
 } else {
@@ -48,7 +47,7 @@ include("includes/header.php");
                       $i = 0;
                       while ($row = mysqli_fetch_array($query)) {
                         $i++;
-                        echo '<tr><th scope="row">' . $i . '</th><th scope="row">' . $i . '</th></tr>';
+                        echo '<tr><th scope="row">' . $i . '</th><th scope="row">' . $row["fullName"] . '</th></tr>';
                       }
                       ?>
                     </tbody>

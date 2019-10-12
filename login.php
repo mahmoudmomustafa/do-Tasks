@@ -3,6 +3,9 @@ session_start();
 if(isset($_SESSION['userLogged'])){
   header('location:index.php');
 }
+if (isset($_REQUEST['out'])) {
+  session_destroy();
+}
 $Page_title = "Login Page";
 $nav = array("Need an account ?", "register.php", "Register");
 include("includes/header.php");
@@ -70,7 +73,7 @@ include("includes/nav.php");
 <script>
   new WOW().init();
   var app = new Vue({
-    el: "main",
+    el: "#main",
     data: {
       email: "",
       password: "",

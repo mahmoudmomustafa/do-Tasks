@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("../includes/config.php");
 $data = json_decode(file_get_contents("php://input"), true);
 $errors = array();

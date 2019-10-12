@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("../includes/config.php");
 $data = json_decode(file_get_contents("php://input"), true);
 $fullName = $data['fullName'];
@@ -57,8 +56,11 @@ if (empty($errors)) {
   $date = date("Y-m-d h:m:s");
   $query = "INSERT INTO users (fullName,userName,email,password,created_at) VALUES 
     ('$fullName','$userName','$email','$encryptPass','$date')";
-  mysqli_query($con, $query);
-  $_SESSION["userLogged"] = $email;
+  $quer = mysqli_query($con, "SELECT * FROM users WHERE email='$email'");
+  if (mysqli_num_rows($quer) == 1) {
+    $row = $quer->fetch_assoc();
+    $_SESSION['userLogged'] = $row;
+  }
 } else {
   die(json_encode($errors));
 }

@@ -3,8 +3,8 @@
     <div class="container">
       <!-- brand -->
       <div class="brand py-3">
-        <a href="index.php" class="text-white hover:text-gray-500 hover:no-underline wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s" data-toggle="tooltip" data-placement="right" title="Apple">
-          <i class="lni-apple"></i>
+        <a href="index.php" class="hover:no-underline wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s" data-toggle="tooltip" data-placement="right" title="Hash">
+          <i class="lni-slack text-gray-400 hover:text-blue-400"></i>
         </a>
       </div>
       <!-- navs -->
@@ -22,16 +22,10 @@
               <i class="lni-user"></i>
             </a>
           </li>
-          <!-- state -->
-          <li class="nav-list shadow text-white rounded mb-3 wow fadeIn" data-wow-duration="2s" data-wow-delay="2s" data-toggle="tooltip" data-placement="right" title="State">
-            <a href="#" class="hover:no-underline">
-              <i class="lni-bar-chart"></i>
-            </a>
-          </li>
           <!-- logout -->
           <li class="nav-list shadow text-red-600 rounded mb-3 content-end wow fadeIn" data-wow-duration="2s" data-wow-delay="2s" data-toggle="tooltip" data-placement="right" title="Sign Out">
-            <a href="login.php" class="hover:no-underline">
-              <i class="lni-exit text-red"></i>
+            <a href="login.php?out=logout" class="hover:no-underline">
+              <i class="lni-power-switch text-red hover:text-red-800"></i>
             </a>
           </li>
         </ul>

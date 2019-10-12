@@ -1,4 +1,5 @@
 <?php
+session_start();
 // connect to database
 $dbhost = 'localhost';
 $dbuser = 'root';
